@@ -3,12 +3,19 @@ version: 2
 
 # Image to use
 build:
-  image: testing
+  os: ubuntu-20.04
+  tools:
+    python: "3.11"
+
+sphinx:
+  configuration: docs/conf.py
 
 # Configuration
 python:
-  version: 3.11.5
   install:
     - requirements: docs/requirements.txt
     - method: pip
       path: .
+
+
+
