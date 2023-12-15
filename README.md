@@ -4,11 +4,11 @@ Note to Dr. Brambor and the teaching assistants: thank you for everything in thi
 
 ## Package on PyPI
 
-https://pypi.org/project/election_text_analysis/
+[https://pypi.org/project/election_text_analysis/](https://pypi.org/project/election_text_analysis/)
 
 ## Docs
 
-https://election-text-analysis.readthedocs.io/en/latest/
+[https://election-text-analysis.readthedocs.io/en/latest/](https://election-text-analysis.readthedocs.io/en/latest/)
 
 ## Overview
 

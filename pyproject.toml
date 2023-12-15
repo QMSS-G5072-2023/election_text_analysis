@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "election_text_analysis"
-version = "0.1.0"
+version = "0.1.1"
 description = "Functions to load and analyzes open-ended data from the ANES election perception surveys conducted every 4 years"
 authors = ["Nikhila Anand"]
 license = "MIT"
