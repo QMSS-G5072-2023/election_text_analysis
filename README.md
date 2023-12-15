@@ -4,7 +4,7 @@ Note to Dr. Brambor and the teaching assistants: thank you for everything in thi
 
 ## Package on PyPI
 
-https://election-text-analysis.readthedocs.io/en/latest/
+https://pypi.org/project/election_text_analysis/
 
 ## Docs
 
