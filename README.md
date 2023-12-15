@@ -1,5 +1,7 @@
 # election_text_analysis
 
+Note to Dr. Brambor and the teaching assistants: thank you for everything in this class! Based on Dr. Brambor's feedback, I reduced the scope of my project based on the proposal. I removed the lemmatization step as well as the n-grams steps. I also just focused on data from 2008-2020. I also focused more on the data steps we learned in this class rather than the analysis. I was able to use the timeseries file directly from ANES that had almost all questions normalized, but didn't contain the open-ended responses. For this project, I joined the open-ended responses from 2008, 2012, 2016, and 2020 with the timeseries data. I then built some functions to calculate the frequency of words across a set of responses.
+
 Functions to load and analyzes open-ended data from the ANES election perception surveys conducted every 4 years.
 
 ANES (American National Election Studies) conducts a large-scale survey every four years, coinciding with US Presidential elections. The survey focuses on voter preferences and election-related behavior, as well as questions on public opinion and attitudes. These studies are conducted as pre-election and post-election interviews. 
@@ -16,13 +18,13 @@ $ pip install election_text_analysis
 
 ## Usage
 
-    >>> import election_text_analysis
+    >>> from election_text_analysis import download_data, read_data, analyze
 
-    >>> # Downloads all data necessary to analyze open-ends from 1984-2020
-    >>> election_text_analysis.download_data.download_all()
+    >>> # Downloads all data necessary to analyze open-ends from 2008-2020
+    >>> download_data.download_all()
 
-    # Loads a dataframe of data over time, with open-ends from 1984-2020
-    >>> df = election_text_analysis.read_data.read_all_data()
+    # Loads a dataframe of data over time, with open-ends from 2008-2020
+    >>> df = read_data.read_all_data()
 
 
 ## Dataset
@@ -57,8 +59,8 @@ There are 8 open-ended columns:
 
 What people dislike about the Democratic Candidate vs the Republican Candidate in 2020:
 
-    dem_dislike_2020   = ts[ts['VCF0004'] == 2020]['Dislike About Democratic Candidate']
-    repub_dislike_2020 = ts[ts['VCF0004'] == 2020]['Dislike About Republican Candidate']
+    dem_dislike_2020   = df[df['VCF0004'] == 2020]['Dislike About Democratic Candidate']
+    repub_dislike_2020 = df[df['VCF0004'] == 2020]['Dislike About Republican Candidate']
     analyze.summarize_word_frequency_differences(dem_dislike_2020, repub_dislike_2020, group_1_label="Dem 2020 dislikes", group_2_label="Repub 2020 dislikes")
 
     These words occurred more often in Dem 2020 dislikes:
@@ -91,8 +93,7 @@ What people dislike about the Democratic Candidate vs the Republican Candidate i
 
 What people dislike about the Democratic Candidate in 2020 vs 2016
 
-    dem_dislike_2016   = ts[ts['VCF0004'] == 2016]['Dislike About Democratic Candidate']
-    analyze.summarize_word_frequency_differences(dem_dislike_2020, dem_dislike_2016, group_1_label="2020 Dem dislikes", group_2_label="2016 Dem dislikes")
+    dem_dislike_2016   = df[df['VCF0004'] == 2016]['Dislike About Democratic Candidate']
     analyze.summarize_word_frequency_differences(dem_dislike_2020, dem_dislike_2016, group_1_label="2020 Dem dislikes", group_2_label="2016 Dem dislikes")
 
     These words occurred more often in 2020 Dem dislikes:
@@ -124,7 +125,7 @@ What people dislike about the Democratic Candidate in 2020 vs 2016
 
 What people dislike about the Republican Candidate in 2020 vs 2016
 
-    repub_dislike_2016 = ts[ts['VCF0004'] == 2016]['Dislike About Republican Candidate']
+    repub_dislike_2016 = df[df['VCF0004'] == 2016]['Dislike About Republican Candidate']
     analyze.summarize_word_frequency_differences(repub_dislike_2020, repub_dislike_2016, group_1_label="2020 Repub dislikes", group_2_label="2016 Repub dislikes")
     
     These words occurred more often in 2020 Repub dislikes:
