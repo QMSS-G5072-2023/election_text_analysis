@@ -5,6 +5,10 @@ description = "Functions to load and analyzes open-ended data from the ANES elec
 authors = ["Nikhila Anand"]
 license = "MIT"
 readme = "README.md"
+documentation = 'https://election-text-analysis.readthedocs.io/en/latest/'
+homepage = "https://github.com/QMSS-G5072-2023/election_text_analysis/tree/main"
+repository = "https://github.com/QMSS-G5072-2023/election_text_analysis/tree/main"
+
 
 [tool.poetry.dependencies]
 python = "^3.11.5"

@@ -2,6 +2,16 @@
 
 Note to Dr. Brambor and the teaching assistants: thank you for everything in this class! Based on Dr. Brambor's feedback, I reduced the scope of my project based on the proposal. I removed the lemmatization step as well as the n-grams steps. I also just focused on data from 2008-2020. I also focused more on the data steps we learned in this class rather than the analysis. I was able to use the timeseries file directly from ANES that had almost all questions normalized, but didn't contain the open-ended responses. For this project, I joined the open-ended responses from 2008, 2012, 2016, and 2020 with the timeseries data. I then built some functions to calculate the frequency of words across a set of responses.
 
+## Docs
+
+https://election-text-analysis.readthedocs.io/en/latest/
+
+## Package on PyPI
+
+https://election-text-analysis.readthedocs.io/en/latest/
+
+## Overview
+
 Functions to load and analyzes open-ended data from the ANES election perception surveys conducted every 4 years.
 
 ANES (American National Election Studies) conducts a large-scale survey every four years, coinciding with US Presidential elections. The survey focuses on voter preferences and election-related behavior, as well as questions on public opinion and attitudes. These studies are conducted as pre-election and post-election interviews. 
